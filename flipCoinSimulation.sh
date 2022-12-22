@@ -1,7 +1,6 @@
 #!/bin/bash
 
-head=()
-tail=()
+
 
 count1=0
 count2=0
@@ -13,18 +12,18 @@ do
 	if [[ $output -eq 1 ]];
 	then
 			echo "HEADS"
-			head[((count1))]=$count1
+			
 			((count1++))
 		
 	else
 			echo "TAILS"
 			echo "HEADS"
-			tail[((count2++))]=$count2
+			
 			((count2++))
 	fi
 	((break++))
 done
 
 
-echo " the number of time the head won is " ${#head[@]};
-echo " the number of time the tail won is " ${#tail[@]};
+echo " the number of time the head won is $count1 " ;
+echo " the number of time the tail won is $count2 " ;
